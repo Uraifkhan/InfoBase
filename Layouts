@@ -1,0 +1,55 @@
+/*infoBase*/
+#include <iostream>
+#include <string>
+
+int main() {
+    int keystore;                     
+    int keymatch = 0;
+    std::string UserName;
+    std::string Match_case = "";
+    std::cout << "******Welcome to DineDirect*****" << '\n';
+
+    std::cout << "__________________ "   << '\n';
+    std::cout << "[_Enter you Name_] "   << '\n';
+    std::cout << "|________________| "   << '\n';
+    std::cin >> UserName;
+    std::cout << " _________________ "  << '\n';
+    std::cout << "| Create your PIN |"  << '\n'; 
+    std::cout << "|_________________|"  << '\n';
+    std::cin >> keystore;
+
+    // Check if keystore is invalid
+    if (keystore <= 0 || keystore < 100000 || keystore > 999999) {
+        std::cout << " __________________________________________ "  << '\n';
+        std::cout << " Invalid value or only 6 digit pin accepted! " << '\n';
+        std::cout << " ------------------------------------------ "  << '\n';
+        return 1;
+    } else {
+        std::cout << "Account created successfully" << '\n';
+        std::cout << "   LogIn Page      " << '\n';
+        std::cout << "__________________ "  << '\n';
+    }   std::cout << "| Enter you Name | "  << '\n';
+        std::cout << "|________________| "  << '\n';
+        std::cin >> Match_case;
+
+        if (Match_case == UserName){
+            std::cout << " __________________"  << '\n';
+            std::cout << " |   Enter PIN    |"  << '\n';
+            std::cout << " |________________|"  << '\n';
+            std::cin >> keystore;
+           if (0 <= keystore){ 
+         
+                       // Rough code 
+
+            }
+            else {
+                std::cout<< "Incorrect PIN" << '\n';
+            }   return 1;
+
+        }
+        else {
+            std::cout << "Incorrect Username" << '\n';
+        }
+
+    return 0;
+}
